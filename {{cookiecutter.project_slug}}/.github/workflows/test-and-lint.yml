@@ -41,7 +41,7 @@ jobs:
         pip install .[test]
     - name: Lint with flake8
       run: |
-        flake8 {{ cookiecutter.project_slug }} --extend-ignore=E226 --count --verbose --show-source --statistics
+        flake8 {{ cookiecutter.project_slug }} --extend-ignore=E226,W293 --count --verbose --show-source --statistics
     - name: Check with black
       run: |
         black --check {{ cookiecutter.project_slug }}
